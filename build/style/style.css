@@ -1,0 +1,16 @@
+.container {
+  margin: 30px auto;
+  width: 600px;
+}
+.purple {
+  color: purple;
+}
+.box {
+  padding: 10px;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+.box:hover {
+  color: green;
+}

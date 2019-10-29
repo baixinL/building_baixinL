@@ -5,12 +5,14 @@ module.exports={
     "no-console":["error",{
         "allow":["warn","error","info"]
       }],
-      "indent":["error",4]
+      "indent":["error",4],
+      "no-unused-vars":["off"]
   },
   "parser":"babel-eslint",
   "parserOptions":{
-    "esmaVersion":6,
-    "sourceType":"script"
+    "ecmaVersion":6,
+    "sourceType":"module",
+    "ecmaFeatures":{"jsx":true,"experimentalObjectRestSpread":true,"modules":true}
   },
   "globals":{
     "window":true

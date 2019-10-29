@@ -9,8 +9,13 @@
     "fix": "eslint --fix .",
     "gulp": "gulp",
     "gulp-watch": "gulp watchFile",
-    "babel": "babel ./src/script -d ./build/script"
+    "babel": "babel ./src/script -d ./build/script",
+    "webpack": "webpack"
   },
+  "sideEffects": [
+      "*.less",
+      "*.css"
+  ],
   "pre-commit": [
     "fix",
     "lint"
@@ -31,17 +36,28 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@babel/preset-stage-0": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "eslint": "^4.19.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-less": "^4.0.1",
-    "pre-commit": "^1.2.2"
+    "less-loader": "^5.0.0",
+    "pre-commit": "^1.2.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",

@@ -1,11 +1,16 @@
-const fn = (x,y)=>x*y;
-
-class Demo {
-    test(){
+import React,{ Component }  from 'react';
+import ReactDOM from 'react-dom';
+import '../style/common.less';
+import {fn1} from './util';
+class Demo extends Component{
+    render(){
         // eslint-disable-next-line no-console
-        console.log("demo func test");
-
+        fn1();
+        // console.log("  env:",process.env.NODE_ENV);
+        return <div className="box">hello {this.props.text}</div>
     }
 }
-exports.module.fn = fn;
-exports.module.Demo = Demo;
+ReactDOM.render(
+    <Demo text="This is a text."/>,
+    window.document.querySelector('.container')
+)
